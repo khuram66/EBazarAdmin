@@ -1,0 +1,47 @@
+﻿@model IEnumerable<EBazarAdmin.Models.Vendor>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="@Url.Action("Index","Admin")">Home</a>
+    </li>
+    <li class="breadcrumb-item active">Vendors</li>
+</ol>
+<div class="card mb-3">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.First_Name)</th>
+                        <th>@Html.DisplayNameFor(model => model.Last_Name)</th>
+                        <th>@Html.DisplayNameFor(model => model.ShopName)</th>
+                        <th>@Html.DisplayNameFor(model => model.Picture)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.First_Name)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Last_Name)</td>
+                            <td>@Html.DisplayFor(modelItem => item.ShopName)</td>
+                            <td><img src="@Url.Content(item.Picture)" height="8%" alt="Alternate Text" /></td>
+                            <td>
+                                <a class="btn btn-sm btn-info " href="@Url.Action("Details", "Category", new { id = item.ID })" aria-label="Details">
+                                    <i class="fa fa-info" aria-hidden="true"></i>
+                                </a>
+                                
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+</div>
+</div>
+    <div class="card-footer small text-muted">Updated yesterday at @System.DateTime.Now</div>
+</div>

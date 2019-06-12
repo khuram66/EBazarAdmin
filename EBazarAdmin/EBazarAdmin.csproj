@@ -1566,7 +1566,9 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\VendorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1577,6 +1579,7 @@
     <Compile Include="Models\Customer.cs">
       <DependentUpon>EBazarDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\CustomerViewModel.cs" />
     <Compile Include="Models\EBazarDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1598,6 +1601,7 @@
     <Compile Include="Models\OrderDetail.cs">
       <DependentUpon>EBazarDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\OrderVeiwModel.cs" />
     <Compile Include="Models\ProdcutImages.cs">
       <DependentUpon>EBazarDB.tt</DependentUpon>
     </Compile>
@@ -1611,6 +1615,7 @@
     <Compile Include="Models\Vendor.cs">
       <DependentUpon>EBazarDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\VendorViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1709,6 +1714,8 @@
     <Content Include="Views\Product\Add.cshtml" />
     <Content Include="Views\Product\Details.cshtml" />
     <Content Include="Views\Product\Delete.cshtml" />
+    <Content Include="Views\Vendor\Index.cshtml" />
+    <Content Include="Views\Customer\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
