@@ -1574,6 +1574,9 @@
       <DependentUpon>EBazarDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CategoryViewModel.cs" />
+    <Compile Include="Models\Customer.cs">
+      <DependentUpon>EBazarDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\EBazarDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1589,6 +1592,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EBazarDB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Order.cs">
+      <DependentUpon>EBazarDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderDetail.cs">
+      <DependentUpon>EBazarDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\ProdcutImages.cs">
       <DependentUpon>EBazarDB.tt</DependentUpon>
     </Compile>
@@ -1597,6 +1606,9 @@
     </Compile>
     <Compile Include="Models\ProductViewModel.cs" />
     <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>EBazarDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Vendor.cs">
       <DependentUpon>EBazarDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
