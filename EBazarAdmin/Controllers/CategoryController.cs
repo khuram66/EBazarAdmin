@@ -40,6 +40,7 @@ namespace EBazarAdmin.Controllers
                     cat.Category_Image.SaveAs(serverpath);
                     Category category = new Category
                     {
+                        ID = cat.ID,
                         Category_Name = cat.Category_Name,
                         Category_Image_Path = cat.Category_Image_Path,
                         Is_Active = cat.Is_Active
@@ -53,7 +54,7 @@ namespace EBazarAdmin.Controllers
                     return HttpNotFound();
                 }
             }
-            return View("Add", "Category");
+            return View();
         }
         [HttpGet]
         public ActionResult Edit(int? id)
@@ -102,7 +103,7 @@ namespace EBazarAdmin.Controllers
                     return RedirectToAction("Index", "Category");
                 }
             }
-            return View("Edit", "Category", cat.ID);
+            return View();
         }
         [HttpGet]
         public ActionResult Details(int id)
