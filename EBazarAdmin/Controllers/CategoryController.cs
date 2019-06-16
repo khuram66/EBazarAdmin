@@ -41,9 +41,9 @@ namespace EBazarAdmin.Controllers
                     Category category = new Category
                     {
                         ID = cat.ID,
-                        Category_Name = cat.Category_Name,
+                        Category_Name = cat.Category_Name.Trim(),
                         Category_Image_Path = cat.Category_Image_Path,
-                        Is_Active = cat.Is_Active
+                        Is_Active = cat.Is_Active.Trim()
                     };
                     db.Categories.Add(category);
                     db.SaveChanges();
@@ -93,9 +93,9 @@ namespace EBazarAdmin.Controllers
                     Category category = new Category
                     {
                         ID = cat.ID,
-                        Category_Name = cat.Category_Name,
+                        Category_Name = cat.Category_Name.Trim(),
                         Category_Image_Path = cat.Category_Image_Path,
-                        Is_Active = cat.Is_Active
+                        Is_Active = cat.Is_Active.Trim()
                     };
                     db.Categories.Add(category);
                     db.Entry(category).State = EntityState.Modified;
